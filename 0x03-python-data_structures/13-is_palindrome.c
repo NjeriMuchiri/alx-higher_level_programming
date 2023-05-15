@@ -55,11 +55,11 @@ int compare(listint_t *h1, listint_t *h2)
     return (0);
 }
 /**
- * is_palindrome - checks is a singly linhked list
+ * is_palindrome - checks is a singly linked list
  * is a palindrome
  * @head: pointer to head of list
  * Return: 0 if it is not a palindrome
- * 1 f it is a palindrome
+ * 1 if it is a palindrome
 */
 int is_palindrome(listint_t **head)
 {

@@ -1,2 +1,2 @@
 #include <stdio.h>
-#include <Python.h>
+#include <python3.10/Python.h>
