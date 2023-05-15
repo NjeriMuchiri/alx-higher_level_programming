@@ -6,21 +6,21 @@
 */
 void reverse(listint_t **h_r)
 {
-    listint_t *prv;
-    listint_t *crr;
+    listint_t *prev;
+    listint_t *curr;
     listint_t *nxt;
 
-    prv = NULL;
-    crr = *h_r;
+    prev = NULL;
+    curr = *h_r;
 
-    while (crr != NULL)
+    while (curr != NULL)
     {
-        nxt = crr->next;
-        crr->next = prv;
-        prv = crr;
-        crr = nxt;
+        nxt = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = nxt;
     }
-    *h_r = prv;
+    *h_r = prev;
 }
 /**
  * compare - compares each int of the list
