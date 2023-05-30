@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Define class for a singly-linked list"""
+"""Define classes for a singly-linked list"""
 
 
 class Node:
@@ -22,7 +22,7 @@ class Node:
     @data.setter
     def data(self, value):
         if not isinstance(value, int):
-            raise TypeError("data must ne an integer")
+            raise TypeError("data must be an integer")
         self.__data = value
 
     @property
@@ -53,7 +53,7 @@ class SinglyLinkedList:
         """
         new = Node(value)
         if self.__head is None:
-            new.next_node = new
+            new.next_node = None
             self.__head = new
         elif self.__head.data > value:
             new.next_node = self.__head
