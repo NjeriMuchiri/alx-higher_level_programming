@@ -21,7 +21,7 @@ import sys
 
 
 def init_chess_board(n):
-    """Initialize an `n`x`n` sized chessboard with 0's."""
+    """Initializes an `n`x`n` sized chessboard with 0's."""
     board = []
     [board.append([]) for i in range(n)]
     [row.append(' ') for i in range(n) for row in board]
@@ -29,14 +29,14 @@ def init_chess_board(n):
 
 
 def chess_board_deepcopy(board):
-    """Return a deepcopy of a chessboard."""
+    """Returns a deepcopy of a chessboard."""
     if isinstance(board, list):
         return list(map(chess_board_deepcopy, board))
     return (board)
 
 
 def get_solution(board):
-    """Return the list of lists representation of a solved chessboard."""
+    """Returns the list of lists representation of a solved chessboard."""
     solution = []
     for r in range(len(board)):
         for c in range(len(board)):
@@ -100,14 +100,14 @@ def xout(board, row, col):
 
 
 def recursive_solve(board, row, queens, solutions):
-    """Recursively solve an N-queens puzzle.
+    """Recursively solves an N-queens puzzle.
 
     Args:
         board (list): The current working chessboard.
         row (int): The current working row.
         queens (int): The current number of placed queens.
         solutions (list): A list of lists of solutions.
-    Returns:
+    Return:
         solutions
     """
     if queens == len(board):
