@@ -18,5 +18,5 @@ class Student:
         self.age = age
 
     def to_json(self):
-        """Get a dictionary representation of the Student."""
-        return self.__dict__.copy()
+        """Gets a dictionary representation of the Student."""
+        return self.__dict__
