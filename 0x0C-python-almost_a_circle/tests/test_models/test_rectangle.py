@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """Module test for rectangle class"""
 import io
 import sys
