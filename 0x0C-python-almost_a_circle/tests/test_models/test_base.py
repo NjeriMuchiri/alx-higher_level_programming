@@ -5,25 +5,24 @@ from models.base import Base
 from models.square import Square
 from models.rectangle import Rectangle
 from io import StringIO
-from unittest import TestCase
 from unittest.mock import patch
 import os
 
 
 class TestBaseMethods(unittest.TestCase):
-    """ Suite to test Base class """
+    """Suites to test Base class"""
 
     def setUp(self):
-        """ Method invoked for each test """
+        """The method invoked for each test"""
         Base._Base__nb_objects = 0
 
     def test_id(self):
-        """ Test assigned id """
+        """Test assigned id"""
         new = Base(1)
         self.assertEqual(new.id, 1)
 
     def test_id_default(self):
-        """ Test default id """
+        """Tests default id"""
         new = Base()
         self.assertEqual(new.id, 1)
 
@@ -80,7 +79,7 @@ class TestBaseMethods(unittest.TestCase):
             self.assertEqual(file.read(), "[]")
 
     def test_save_to_file_2(self):
-        """ Test JSON file """
+        """Tests JSON file """
         Rectangle.save_to_file(None)
         res = "[]\n"
         with open("Rectangle.json", "r") as file:
