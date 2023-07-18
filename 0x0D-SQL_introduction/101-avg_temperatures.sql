@@ -1,5 +1,5 @@
 -- Displays the average temperature (Fahrenheit)
--- importing in hbtn_0c_0 database 
+-- by city ordered in a descending order
 SELECT city, AVG(value) AS avg_temper
 FROM temperatures
 GROUP BY city
