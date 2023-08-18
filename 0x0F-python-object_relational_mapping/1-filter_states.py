@@ -10,8 +10,4 @@ if __name__ == "__main__":
     curs.execute("SELECT * \
     FROM `states` \
     ORDER BY `id`")
-    states = curs.fetchall()
-
-    for state in states:
-        if state[1][0] == "N":
-            print(state)
+    [print(state) for state in curs.fetchall() if state[1][0] == "N"]
