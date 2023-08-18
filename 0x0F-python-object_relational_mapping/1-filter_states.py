@@ -7,12 +7,9 @@ import sys
 if __name__ == "__main__":
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     curs = db.cursor()
-    curs.execute("SELECT * \
-    FROM states \
-    WHERE CONVERT(`name` USING Latin1) \
-    COLLATE Latin1_General_CS \
-    LIKE 'N%';")
+    curs.execute("SELECT * FROM `states` ORDER BY `id`")
     states = curs.fetchall()
 
     for state in states:
-        print(state)
+        if state[1][0] == "N":
+            print(state)
