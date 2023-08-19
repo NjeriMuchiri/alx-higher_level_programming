@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Lists all state objects that contain letter a from the database hbtn_0e_6_usa"""
+"""Lists all state objects that contain letter
+a from the database hbtn_0e_6_usa"""
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -13,7 +14,6 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter(State.name.like('%a%')).all()
-
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    for state in session.query(State).order_by(State.id):
+        if "a" in state.name:
+            print("{}: {}".format(state.id, state.name))
