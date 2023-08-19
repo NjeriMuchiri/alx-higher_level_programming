@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """Lists all state objects that contain letter a from the database hbtn_0e_6_usa"""
 import sys
 from sqlalchemy import create_engine
