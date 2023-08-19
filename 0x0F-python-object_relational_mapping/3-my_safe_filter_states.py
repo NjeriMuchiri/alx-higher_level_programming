@@ -6,9 +6,8 @@ import MySQLdb
 if __name__ == "__main__":
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     curs = db.cursor()
-    curs.execute("SELECT * FROM `states`")
+    curs.execute("SELECT * FROM states WHERE name = %s;", (sys.argv[4],))
     states = curs.fetchall()
 
     for state in states:
-        if state[1] == sys.argv[4]:
-            print(state)
+        print(state)
