@@ -8,8 +8,8 @@ if __name__ == "__main__":
                          port=3306)
     curs = db.cursor()
     curs.execute("SELECT cities.id, cities.name, states.name \
-        FROM cities JOIN states ON cities.states_id = states.id;")
-    states = curs.fetchall()
+        FROM cities INNER JOIN states ON cities.states_id = states.id;")
+    cities = curs.fetchall()
 
-    for state in states:
-        print(state)
+    for city in cities:
+        print(city)
