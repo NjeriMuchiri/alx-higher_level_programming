@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """lists all city objects contained in hbtn_0e_101_usa"""
 import sys
 from sqlalchemy import create_engine
