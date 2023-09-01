@@ -9,7 +9,8 @@ import sys
 
 if __name__ == '__main__':
     values = {'email': sys.argv[2]}
-    data = urllib.parse.urlencode(values).encode('ascii')
+    data = urllib.parse.urlencode(values)
+    data = data.encode('ascii')
     with urllib.request.urlopen(sys.argv[1], data) as res:
         html = res.read()
         print(html.decode('utf-8'))
