@@ -14,7 +14,7 @@ if __name__ == '__main__':
     the_req = requests.get(the_url)
     the_commits = the_req.json()
     try:
-        for i in range(0, 10):
+        for i in range(10):
             print("{}: {}".format(
                 the_commits[i].get("sha"),
                 the_commits[i].get("commit").get("author").get("name")))
