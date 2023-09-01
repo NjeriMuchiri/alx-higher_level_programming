@@ -5,9 +5,9 @@ import requests
 import sys
 
 if __name__ == '__main__':
-    the_letter = {'q': ""}
-    the_letter['q'] = sys.argv[1]
-    the_req = requests.post('http://0.0.0.0:5000/search_user', the_letter)
+    the_letter = {"q": ''} if len(sys.argv) == 1 else sys.argv[1]
+    letter = {"q": the_letter}
+    the_req = requests.post('http://0.0.0.0:5000/search_user', letter)
 
     try:
         obj_json = the_req.json()
