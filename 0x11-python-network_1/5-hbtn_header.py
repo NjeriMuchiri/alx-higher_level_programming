@@ -7,4 +7,4 @@ import sys
 
 if __name__ == '__main__':
     the_value = requests.get(sys.argv[1])
-    print(the_value.headers.get('X-Request.Id'))
+    print(the_value.headers.get('X-Request-Id'))
