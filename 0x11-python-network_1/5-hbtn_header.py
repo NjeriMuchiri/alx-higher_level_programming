@@ -6,8 +6,5 @@ import sys
 
 
 if __name__ == '__main__':
-    try:
-        the_value = requests.get(sys.argv[1])
-        print (the_value.headers.get('X-Request.Id'))
-    except:
-        pass
+    the_value = requests.get(sys.argv[1])
+    print(the_value.headers.get('X-Request.Id'))
